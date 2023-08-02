@@ -1,0 +1,27 @@
+﻿@model XUnitAssignment.Models.StockTrade
+
+@{
+	ViewBag.Title = "Home";
+}
+
+<form>
+	<div class="box trading-panel">
+		<div class="flex trading-panel-flex">
+			<div id="stock-price-panel">
+				<div class="stock">
+					<div class="stock-title">@Model.StockName (@Model.StockSymbol)</div>
+					<div class="stock-price">
+						<b id="StockCurrency" class="text-grey">$</b>
+						<b id="StockPrice">@Model.Price.ToString("0.00", CultureInfo.InvariantCulture)</b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input type="hidden" id="StockSymbolId" value="@Model.StockSymbol">
+	<input type="hidden" id="FinnhubTokenId" value="@ViewBag.FinnhubToken">
+
+</form>
+
+<script src="~/Scripts/FinnhubScript.js"></script>
