@@ -4,7 +4,7 @@ using ServiceContracts;
 using XUnitAssignment.Models;
 using XUnitAssignment.Options;
 
-namespace StockConfigurationAssignment.Controllers
+namespace XUnitAssignment.Controllers
 {
 	public class TradeController : Controller
 	{
